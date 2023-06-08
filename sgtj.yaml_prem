@@ -1,0 +1,246 @@
+AKRAB:
+  - &sni-akrab maps.gstatic.com 
+  - &akrab 104.17.3.81 
+#==================================================#
+proxies:
+#==================================================#
+  - name: SGVM-Path
+    server: sg.xmbb.net
+    port: 443
+    type: vmess
+    uuid: fe34cb60-b89d-11ed-bc1d-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SGVM-Contabo2
+    server: sg-contabo2.1server.co
+    port: 443
+    type: vmess
+    uuid: 6cffa510-8147-11ed-b4dc-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SGVM-Contabo3
+    server: sg-contabo3.1server.co
+    port: 443
+    type: vmess
+    uuid: 5274e750-878c-11ed-90ce-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SGVM-SGGS
+    server: 1.htmlcdn.net
+    port: 8443
+    type: vmess
+    uuid: 3bb410e0-be1d-11ed-ad5b-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /files
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+# REVERSE Port 80 TLS False
+#==================================================#
+  - name: SGVM-PathX
+    server: *akrab
+    port: 80
+    type: vmess
+    uuid: fe34cb60-b89d-11ed-bc1d-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: sg.xmbb.net
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: sg.xmbb.net
+    udp: true
+#==================================================#
+  - name: SGVM-Contabo2X
+    server: *akrab
+    port: 80
+    type: vmess
+    uuid: 6cffa510-8147-11ed-b4dc-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: sg-contabo2.1server.co
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: sg-contabo2.1server.co
+    udp: true
+#==================================================#
+  - name: SGVM-Contabo3X
+    server: *akrab
+    port: 80
+    type: vmess
+    uuid: 5274e750-878c-11ed-90ce-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: sg-contabo3.1server.co
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: sg-contabo3.1server.co
+    udp: true
+#==================================================#
+  - name: SGVM-SGGSX
+    server: *akrab
+    port: 80
+    type: vmess
+    uuid: 3bb410e0-be1d-11ed-ad5b-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: 1.htmlcdn.net
+    network: ws
+    ws-opts:
+      path: /files
+      headers:
+        Host: 1.htmlcdn.net
+    udp: true
+
+
+#==================================================#
+  - name: SG-Contabo
+    server: sg-contabo1.1server.co
+    port: 443
+    type: trojan
+    password: beb9d4d0-ae59-11ed-98d8-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-OVH
+    server: sg-ovh.1server.co
+    port: 443
+    type: trojan
+    password: 3f1c5f90-713a-11ed-b7b9-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-HE
+    server: sg-trojan.1server.co
+    port: 443
+    type: trojan
+    password: 852218f0-713a-11ed-bc9b-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+# REVERSE
+#==================================================#
+  - name: SG-ContaboX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: beb9d4d0-ae59-11ed-98d8-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: sg-contabo1.1server.co
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg-contabo1.1server.co
+    udp: true
+#==================================================#
+  - name: SG-OVHX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 3f1c5f90-713a-11ed-b7b9-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: sg-ovh.1server.co
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg-ovh.1server.co
+    udp: true
+#==================================================#
+  - name: SG-HEX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 852218f0-713a-11ed-bc9b-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: sg-trojan.1server.co
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg-trojan.1server.co
+    udp: true
+

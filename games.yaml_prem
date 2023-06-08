@@ -1,0 +1,65 @@
+#==================================================#
+proxies:
+#==================================================#
+
+  - name: test-server1
+    server: uix.toooo.lol
+    port: 55244
+    type: vmess
+    uuid: 9e08e8f8-ee91-4898-97df-59db4ad11acc
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: maps.gstatic.com
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: maps.gstatic.com
+    udp: true
+
+
+
+
+  - name: test-server2
+    server: uix2.toooo.lol
+    port: 30427
+    type: vmess
+    uuid: d1ef64f1-942e-47b5-fa4a-a0ba28459650
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: maps.gstatic.com
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: maps.gstatic.com
+    udp: true
+
+
+
+
+
+  ##=======================================
+  - name: testX-80
+    server: uix.toooo.lol
+    port: 80
+    type: vmess
+    uuid: 009fd41c-6f5e-4081-f444-abe3eb59c13a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: meet.google.com
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: meet.google.com
+    udp: true

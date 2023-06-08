@@ -1,0 +1,37 @@
+AKRAB:
+  - &sni-akrab maps.gstatic.com 
+  - &akrab 104.17.3.81 
+#==================================================#
+proxies:
+#==================================================#
+  - name: SG-HOW01-OVH
+    server: sg6-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 2a35cd70-d3b5-11ed-840a-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-HOW01-OVHX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 2a35cd70-d3b5-11ed-840a-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: sg6-trojan.bonds.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg6-trojan.bonds.id
+    udp: true
+
+

@@ -1,0 +1,216 @@
+AKRAB:
+  - &sni-akrab maps.gstatic.com
+  - &akrab dashboard.midtrans.com
+#==================================================#
+proxies:
+#==================================================#
+  - name: ID-Biznet
+    server: id-biznet1.bypass.id
+    port: 443
+    type: trojan
+    password: 1d835030-3295-11ed-8a7a-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+    #interface-name: usb0
+#==================================================#
+  - name: ID-Herza
+    server: 1.lowh.net
+    port: 443
+    type: trojan
+    password: 7c6a54e0-98b7-11ed-84a8-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+    #interface-name: usb0
+#==================================================#
+  - name: ID-Sanggoro
+    server: 4.lowh.net
+    port: 443
+    type: trojan
+    password: 1dfbf930-9f23-11ed-a9e1-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+    #interface-name: usb0
+#==================================================#
+  - name: ID-Atha
+    server: id-atha.bypass.id
+    port: 443
+    type: trojan
+    password: bb997830-227e-11ed-94be-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+    #interface-name: usb0
+#==================================================#
+# REVERSE
+#==================================================#
+  - name: ID-BiznetX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 1d835030-3295-11ed-8a7a-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: id-biznet1.bypass.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: id-biznet1.bypass.id
+    udp: true
+    #interface-name: usb0
+#==================================================#
+  - name: ID-HerzaX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 7c6a54e0-98b7-11ed-84a8-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: 1.lowh.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: 1.lowh.net
+    udp: true
+    #interface-name: usb0
+#==================================================#
+  - name: ID-SanggoroX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 1dfbf930-9f23-11ed-a9e1-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: 4.lowh.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: 4.lowh.net
+    udp: true
+    #interface-name: usb0
+#==================================================#
+  - name: ID-AthaX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: bb997830-227e-11ed-94be-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: id-atha.bypass.id
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: id-atha.bypass.id
+    udp: true
+    #interface-name: usb0
+
+
+
+#==================================================#
+  - name: IDVM-Herza
+    server: 2.lowh.net
+    port: 443
+    type: vmess
+    uuid: 0a971f90-ae58-11ed-915a-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: *sni-akrab
+    udp: true
+    #interface-name: usb0
+#==================================================#
+  - name: IDVM-Sanggoro
+    server: 5.lowh.net
+    port: 443
+    type: vmess
+    uuid: 6f387c90-ae58-11ed-8252-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: *sni-akrab
+    udp: true
+    #interface-name: usb0
+#==================================================#
+# REVERSE PORT 80 TLS false
+#==================================================#
+  - name: IDVM-HerzaX
+    server: *akrab
+    port: 80
+    type: vmess
+    uuid: 0a971f90-ae58-11ed-915a-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: 2.lowh.net
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: 2.lowh.net
+    udp: true
+    #interface-name: usb0
+#==================================================#
+  - name: IDVM-SanggoroX
+    server: *akrab
+    port: 80
+    type: vmess
+    uuid: 6f387c90-ae58-11ed-8252-1577c1651679
+    alterId: 0
+    cipher: auto
+    tls: false
+    skip-cert-verify: true
+    allowInsecure: true
+    servername: 5.lowh.net
+    network: ws
+    ws-opts:
+      path: /fastssh
+      headers:
+        Host: 5.lowh.net
+    udp: true
+    #interface-name: usb0

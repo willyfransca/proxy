@@ -1,0 +1,434 @@
+AKRAB:
+  - &sni-akrab maps.gstatic.com 
+  - &akrab 104.17.3.81 
+#==================================================#
+proxies:
+
+#==================================================#
+  - name: ID-Sanggoro
+    server: 4.lowh.net
+    port: 443
+    type: trojan
+    password: 1dfbf930-9f23-11ed-a9e1-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+
+#==================================================#
+  - name: ID-SanggoroX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 1dfbf930-9f23-11ed-a9e1-1577c1651679
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: 4.lowh.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: 4.lowh.net
+    udp: true
+
+
+#==================================================#
+  - name: ID-Herza-How
+    server: id-1.test3.net
+    port: 443
+    type: trojan
+    password: 66457be0-d07b-11ed-815c-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+
+#==================================================#
+  - name: ID-HerzaX-How
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 66457be0-d07b-11ed-815c-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: id-1.test3.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: id-1.test3.net
+    udp: true
+
+#==================================================#
+  - name: ID-Herza-How1
+    server: id-1.test3.net
+    port: 443
+    type: trojan
+    password: 82c6e2b0-d1c1-11ed-9786-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+
+#==================================================#
+  - name: ID-HerzaX-How1
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 82c6e2b0-d1c1-11ed-9786-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: id-1.test3.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: id-1.test3.net
+    udp: true
+
+# #==========================
+#   - name: ID-sshocean7-8Apr-mid
+#     server: *akrab
+#     port: 443
+#     type: vmess
+#     uuid: d913e142-1016-43b2-9d59-84b1b8b82656
+#     alterId: 0
+#     cipher: auto
+#     tls: true
+#     skip-cert-verify: true
+#     allowInsecure: true
+#     servername: id7.securev2ray.com
+#     network: ws
+#     ws-opts:
+#       path: /vmess
+#       headers:
+#         Host: id7.securev2ray.com
+#     udp: true
+
+
+# #==========================
+#   - name: SG-sshocean1-3Apr-mid
+#     server: *akrab
+#     port: 443
+#     type: vmess
+#     uuid: a24092b6-c1ed-4a0c-a8f1-dd50f6e30b50
+#     alterId: 0
+#     cipher: auto
+#     tls: true
+#     skip-cert-verify: true
+#     allowInsecure: true
+#     servername: sg8.securev2ray.com
+#     network: ws
+#     ws-opts:
+#       path: /vmess
+#       headers:
+#         Host: sg8.securev2ray.com
+#     udp: true
+
+
+# #==================================================#
+#   - name: ID-jagonssh-4Apr
+#     server: id2go.ipservers.xyz 
+#     port: 443
+#     type: trojan
+#     password: jagoanssh-forkgtpoj
+#     skip-cert-verify: true
+#     allowInsecure: true
+#     sni: *sni-akrab
+#     network: ws
+#     ws-opts:
+#       path: /trojan
+#       headers:
+#         Host: *sni-akrab
+#     udp: true
+# #==================================================#
+#   - name: ID-jagonassh-4AprX
+#     server: *akrab
+#     port: 443
+#     type: trojan
+#     password: jagoanssh-forkgtpoj
+#     skip-cert-verify: true
+#     allowInsecure: true
+#     sni: id2go.ipservers.xyz 
+#     network: ws
+#     ws-opts:
+#       path: /trojan
+#       headers:
+#         Host: id2go.ipservers.xyz 
+#     udp: true
+
+
+
+# #==================================================#
+#   - name: IDv-sshocean8-9Apr
+#     server: id8.v2vless.xyz
+#     port: 443
+#     type: vless
+#     uuid: 16bd9432-f0b7-48fb-a387-e24751550e6c
+#     cipher: auto
+#     tls: true
+#     skip-cert-verify: true
+#     servername: *sni-akrab
+#     network: ws
+#     ws-opts:
+#       path: /vless
+#       headers:
+#         Host: *sni-akrab
+
+# #==================================================#
+#   - name: IDv-sshocean8-9AprX
+#     server: *akrab
+#     port: 443
+#     type: vless
+#     uuid: 16bd9432-f0b7-48fb-a387-e24751550e6c
+#     cipher: auto
+#     tls: true
+#     skip-cert-verify: true
+#     servername: id8.v2vless.xyz
+#     network: ws
+#     ws-opts:
+#       path: /vless
+#       headers:
+#         Host: id8.v2vless.xyz
+
+# #==================================================#
+#   - name: IDv-sshocean6-9Apr
+#     server: id6.v2vless.xyz
+#     port: 443
+#     type: vless
+#     uuid: 16da814c-a971-4e64-a3b7-c0d0baab61d9
+#     cipher: auto
+#     tls: true
+#     skip-cert-verify: true
+#     servername: *sni-akrab
+#     network: ws
+#     ws-opts:
+#       path: /vless
+#       headers:
+#         Host: *sni-akrab
+
+# #==================================================#
+#   - name: IDv-sshocean6-9AprX
+#     server: *akrab
+#     port: 443
+#     type: vless
+#     uuid: 16da814c-a971-4e64-a3b7-c0d0baab61d9
+#     cipher: auto
+#     tls: true
+#     skip-cert-verify: true
+#     servername: id6.v2vless.xyz
+#     network: ws
+#     ws-opts:
+#       path: /vless
+#       headers:
+#         Host: id6.v2vless.xyz
+
+# #==================================================#
+#   - name: IDv-sshocean5-9Apr
+#     server: id5.v2vless.xyz
+#     port: 443
+#     type: vless
+#     uuid: d53ef180-2209-4cdf-9a1a-e993572181b5
+#     cipher: auto
+#     tls: true
+#     skip-cert-verify: true
+#     servername: *sni-akrab
+#     network: ws
+#     ws-opts:
+#       path: /vless
+#       headers:
+#         Host: *sni-akrab
+
+# #==================================================#
+#   - name: IDv-sshocean5-9AprX
+#     server: *akrab
+#     port: 443
+#     type: vless
+#     uuid: d53ef180-2209-4cdf-9a1a-e993572181b5
+#     cipher: auto
+#     tls: true
+#     skip-cert-verify: true
+#     servername: id5.v2vless.xyz
+#     network: ws
+#     ws-opts:
+#       path: /vless
+#       headers:
+#         Host: id5.v2vless.xyz
+
+
+
+#==================================================#
+  - name: SG-HO01-OVH                               
+    server: sg-3.test3.net                          
+    port: 443                                       
+    type: trojan                                    
+    password: 7bfb05a0-db56-11ed-8169-1239d0255272  
+    skip-cert-verify: true                          
+    allowInsecure: true                             
+    sni: *sni-akrab                                 
+    network: ws                                     
+    ws-opts:                                        
+      path: /howdy                                  
+      headers:                                      
+        Host: *sni-akrab                            
+    udp: true                                       
+#==================================================#
+  - name: SG-HO01-OVHX                            
+    server: *akrab                                
+    port: 443                                     
+    type: trojan                                  
+    password: 7bfb05a0-db56-11ed-8169-1239d0255272
+    skip-cert-verify: true  
+    allowInsecure: true     
+    sni: sg-3.test3.net     
+    network: ws             
+    ws-opts:                
+      path: /howdy          
+      headers:              
+        Host: sg-3.test3.net                      
+    udp: true             
+                
+#==================================================#
+  - name: SG-HOW0-AMP
+    server: sg-2.test3.net
+    port: 443
+    type: trojan
+    password: 48f011d0-d492-11ed-87fb-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-HOW0-AMPX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 48f011d0-d492-11ed-87fb-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: sg-2.test3.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg-2.test3.net
+    udp: true
+
+
+#==================================================#
+  - name: SG-HOW02-AMP
+    server: sg-2.test3.net
+    port: 443
+    type: trojan
+    password: 61fb0180-d5ba-11ed-80f4-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-HOW02-AMPX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: 61fb0180-d5ba-11ed-80f4-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: sg-2.test3.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: sg-2.test3.net
+    udp: true
+
+
+
+#=========================================
+  - name: ID-jagoanssh-maps
+    server: id2go.ipservers.xyz 
+    port: 443
+    type: trojan
+    password: jagoanssh-xcnbzvvc
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: maps.gstatic.com
+    network: ws
+    ws-opts:
+      path: "/trojan"
+      headers:
+        Host: maps.gstatic.com
+    udp: true
+
+#=========================================
+  - name: ID-jagoanssh-mid    
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: jagoanssh-xcnbzvvc
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: id2go.ipservers.xyz 
+    network: ws
+    ws-opts:
+      path: "/trojan"
+      headers:
+        Host: id2go.ipservers.xyz 
+    udp: true
+
+
+#=========================================
+  - name: ID-HOW
+    server: id-1.test3.net
+    port: 443
+    type: trojan
+    password: b6f13ea0-db5e-11ed-8d4d-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: ID-HOWX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: b6f13ea0-db5e-11ed-8d4d-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: id-1.test3.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: id-1.test3.net
+    udp: true
+

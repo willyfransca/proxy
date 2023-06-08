@@ -1,0 +1,102 @@
+AKRAB:
+  - &sni-akrab maps.gstatic.com 
+  - &akrab 104.17.3.81 
+#==================================================#
+proxies:
+
+#=========================================
+  - name: ID-jagoanssh-maps
+    server: id2go.ipservers.xyz 
+    port: 443
+    type: trojan
+    password: jagoanssh-xcnbzvvc
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: maps.gstatic.com
+    network: ws
+    ws-opts:
+      path: "/trojan"
+      headers:
+        Host: maps.gstatic.com
+    udp: true
+
+#=========================================
+  - name: ID-jagoanssh-mid    
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: jagoanssh-xcnbzvvc
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: id2go.ipservers.xyz 
+    network: ws
+    ws-opts:
+      path: "/trojan"
+      headers:
+        Host: id2go.ipservers.xyz 
+    udp: true
+
+#==================================================#
+  - name: ID-HOW
+    server: id-1.test3.net
+    port: 443
+    type: trojan
+    password: b6f13ea0-db5e-11ed-8d4d-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: ID-HOWX
+    server: *akrab
+    port: 443
+    type: trojan
+    password: b6f13ea0-db5e-11ed-8d4d-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: id-1.test3.net
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: id-1.test3.net
+    udp: true
+
+
+#=========================================
+  - name: SG-jagoanssh-maps
+    server: sg2go.ipservers.xyz
+    port: 443
+    type: trojan
+    password: jagoanssh-vfvfruvij
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: maps.gstatic.com
+    network: ws
+    ws-opts:
+      path: "/trojan"
+      headers:
+        Host: maps.gstatic.com
+    udp: true
+
+#=========================================
+  - name: SG-jagoanssh-mid    
+    server: 104.17.3.81
+    port: 443
+    type: trojan
+    password: jagoanssh-vfvfruvij
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: sg2go.ipservers.xyz
+    network: ws
+    ws-opts:
+      path: "/trojan"
+      headers:
+        Host: sg2go.ipservers.xyz
+    udp: true
+

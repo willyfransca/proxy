@@ -1,0 +1,133 @@
+AKRAB:
+  - &sni-akrab maps.gstatic.com 
+  - &akrab meet.google.com
+#==================================================#
+proxies:
+#==================================================#
+  - name: SG-HOW00-Herza1
+    server: sg1-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 0cfa8cd0-0603-11ee-9d03-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-HOW00-XHerza1
+    server: sg1-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 0cfa8cd0-0603-11ee-9d03-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *akrab
+    udp: true
+
+
+#==================================================#
+  - name: SG-HOW01-Herza1
+    server: sg1-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 204b2070-0603-11ee-a06c-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-HOW01-XHerza1
+    server: sg1-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 204b2070-0603-11ee-a06c-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *akrab
+    udp: true
+
+
+#==================================================#
+  - name: SG-HOW02-Herza1
+    server: sg1-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 28175510-0603-11ee-aa97-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-HOW02-XHerza1
+    server: sg1-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 28175510-0603-11ee-aa97-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *akrab
+    udp: true
+
+
+#==================================================#
+  - name: SG-HOW03-Herza1
+    server: sg1-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 35ab6900-0603-11ee-a3a0-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-HOW03-XHerza1
+    server: sg1-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 35ab6900-0603-11ee-a3a0-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *akrab
+    udp: true
+
+
