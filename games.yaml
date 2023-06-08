@@ -131,3 +131,34 @@ proxies:
     udp: true
 
 
+#==================================================#
+  - name: SG-HOW04-Herza3
+    server: sg3-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 8c4f6660-0605-11ee-a39f-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *sni-akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *sni-akrab
+    udp: true
+#==================================================#
+  - name: SG-HOW04-XHerza3
+    server: sg3-trojan.bonds.id
+    port: 443
+    type: trojan
+    password: 8c4f6660-0605-11ee-a39f-1239d0255272
+    skip-cert-verify: true
+    allowInsecure: true
+    sni: *akrab
+    network: ws
+    ws-opts:
+      path: /howdy
+      headers:
+        Host: *akrab
+    udp: true
+
