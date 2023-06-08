@@ -147,7 +147,7 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW4-XHerza3
+  - name: SG-HOW4-XxHerza3
     server: sg3-trojan.bonds.id
     port: 443
     type: trojan
