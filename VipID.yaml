@@ -8,7 +8,7 @@ proxies:
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: a8009c40-0744-11ee-97b3-1239d0255272
+    password: f7613520-0a95-11ee-b8b5-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -23,7 +23,7 @@ proxies:
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: a8009c40-0744-11ee-97b3-1239d0255272
+    password: f7613520-0a95-11ee-b8b5-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
@@ -40,7 +40,7 @@ proxies:
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 704907d0-0744-11ee-a510-1239d0255272
+    password: 000c3df0-0a96-11ee-8dde-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -55,7 +55,7 @@ proxies:
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 704907d0-0744-11ee-a510-1239d0255272
+    password: 000c3df0-0a96-11ee-8dde-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
@@ -72,7 +72,7 @@ proxies:
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 96eda700-0744-11ee-b1da-1239d0255272
+    password: 065a8610-0a96-11ee-b18b-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -87,7 +87,7 @@ proxies:
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 96eda700-0744-11ee-b1da-1239d0255272
+    password: 065a8610-0a96-11ee-b18b-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
