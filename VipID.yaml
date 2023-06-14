@@ -4,7 +4,7 @@ AKRAB:
 #==================================================#
 proxies:
 #==================================================#
-  - name: SG-HOW0-AMP
+  - name: SG-HOW0-AMP-14062023
     server: sg-2.test3.net
     port: 443
     type: trojan
@@ -19,7 +19,7 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW0-XAMP
+  - name: SG-HOW0-XAMP-14062023
     server: sg-2.test3.net
     port: 443
     type: trojan
@@ -36,7 +36,7 @@ proxies:
 
 
 #==================================================#
-  - name: SG-HOW1-AMP
+  - name: SG-HOW1-AMP-14062023
     server: sg-2.test3.net
     port: 443
     type: trojan
@@ -51,7 +51,7 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW1-XAMP
+  - name: SG-HOW1-XAMP-14062023
     server: sg-2.test3.net
     port: 443
     type: trojan
@@ -68,7 +68,7 @@ proxies:
 
 
 #==================================================#
-  - name: SG-HOW2-AMP
+  - name: SG-HOW2-AMP-14062023
     server: sg-2.test3.net
     port: 443
     type: trojan
@@ -83,7 +83,7 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW2-XAMP
+  - name: SG-HOW2-XAMP-14062023
     server: sg-2.test3.net
     port: 443
     type: trojan
