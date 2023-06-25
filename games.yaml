@@ -4,11 +4,11 @@ AKRAB:
 #==================================================#
 proxies:
 #==================================================#
-  - name: SG-HOW0-Herza1
+  - name: SG-HOW0-Herza1-25062023
     server: sg1-trojan.bonds.id
     port: 443
     type: trojan
-    password: a44d8c00-0a95-11ee-a295-1239d0255272
+    password: 34842940-132d-11ee-98ba-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -19,11 +19,11 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW0-XHerza1
+  - name: SG-HOW0-XHerza1-25062023
     server: sg1-trojan.bonds.id
     port: 443
     type: trojan
-    password: a44d8c00-0a95-11ee-a295-1239d0255272
+    password: 34842940-132d-11ee-98ba-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
@@ -36,11 +36,11 @@ proxies:
 
 
 #==================================================#
-  - name: SG-HOW1-Herza1
+  - name: SG-HOW1-Herza1-25062023
     server: sg1-trojan.bonds.id
     port: 443
     type: trojan
-    password: abe776e0-0a95-11ee-9f87-1239d0255272
+    password: 3aa51f90-132d-11ee-9f1f-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -51,11 +51,11 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW1-XHerza1
+  - name: SG-HOW1-XHerza1-25062023
     server: sg1-trojan.bonds.id
     port: 443
     type: trojan
-    password: abe776e0-0a95-11ee-9f87-1239d0255272
+    password: 3aa51f90-132d-11ee-9f1f-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
@@ -68,11 +68,11 @@ proxies:
 
 
 #==================================================#
-  - name: SG-HOW2-Herza1
+  - name: SG-HOW2-Herza1-25062023
     server: sg1-trojan.bonds.id
     port: 443
     type: trojan
-    password: b351d4f0-0a95-11ee-9677-1239d0255272
+    password: 4bacdff0-132d-11ee-b889-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -83,11 +83,11 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW2-XHerza1
+  - name: SG-HOW2-XHerza1-25062023
     server: sg1-trojan.bonds.id
     port: 443
     type: trojan
-    password: b351d4f0-0a95-11ee-9677-1239d0255272
+    password: 4bacdff0-132d-11ee-b889-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
@@ -100,11 +100,11 @@ proxies:
 
 
 #==================================================#
-  - name: SG-HOW3-Herza1
+  - name: SG-HOW3-Herza1-25062023
     server: sg1-trojan.bonds.id
     port: 443
     type: trojan
-    password: bcd0cd50-0a95-11ee-ae90-1239d0255272
+    password: 539d4a90-132d-11ee-afba-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -115,11 +115,11 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW3-XHerza1
+  - name: SG-HOW3-XHerza1-25062023
     server: sg1-trojan.bonds.id
     port: 443
     type: trojan
-    password: bcd0cd50-0a95-11ee-ae90-1239d0255272
+    password: 539d4a90-132d-11ee-afba-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
