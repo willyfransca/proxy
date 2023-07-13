@@ -4,11 +4,11 @@ AKRAB:
 #==================================================#
 proxies:
 #==================================================#
-  - name: SG-HOW0-AMP-04072023
+  - name: SG-HOW0-AMP-13072023
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 11bafb40-1a0b-11ee-b413-1239d0255272
+    password: 6cd63930-2155-11ee-8733-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -19,11 +19,11 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW0-XAMP-04072023
+  - name: SG-HOW0-XAMP-13072023
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 11bafb40-1a0b-11ee-b413-1239d0255272
+    password: 6cd63930-2155-11ee-8733-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
@@ -36,11 +36,11 @@ proxies:
 
 
 #==================================================#
-  - name: SG-HOW1-AMP-04072023
+  - name: SG-HOW1-AMP-13072023
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 21136090-1a0b-11ee-9a7f-1239d0255272
+    password: 732bf540-2155-11ee-8709-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -51,11 +51,11 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW1-XAMP-04072023
+  - name: SG-HOW1-XAMP-13072023
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 21136090-1a0b-11ee-9a7f-1239d0255272
+    password: 732bf540-2155-11ee-8709-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
@@ -68,11 +68,11 @@ proxies:
 
 
 #==================================================#
-  - name: SG-HOW2-AMP-04072023
+  - name: SG-HOW2-AMP-13072023
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 296b2ab0-1a0b-11ee-8e2a-1239d0255272
+    password: 89f158a0-2155-11ee-8401-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *sni-akrab
@@ -83,11 +83,11 @@ proxies:
         Host: *sni-akrab
     udp: true
 #==================================================#
-  - name: SG-HOW2-XAMP-04072023
+  - name: SG-HOW2-XAMP-13072023
     server: sg-2.test3.net
     port: 443
     type: trojan
-    password: 296b2ab0-1a0b-11ee-8e2a-1239d0255272
+    password: 89f158a0-2155-11ee-8401-1239d0255272
     skip-cert-verify: true
     allowInsecure: true
     sni: *akrab
